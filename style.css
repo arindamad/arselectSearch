@@ -1,0 +1,159 @@
+*{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    color: #291515;
+    font-family: 'Open Sans', sans-serif;
+}
+ul{
+    list-style: none;
+}
+
+.container{
+    max-width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;  
+    margin: 0 auto;  
+}
+.row{
+    margin-right: -15px;
+    margin-left: -15px;    
+    display: flex;
+    flex-wrap: wrap;
+}
+.container::after, .row::after, .container::before, .row::before{
+    content: "";
+    display: table;
+}
+.container::after, .row::after{
+    clear: both;
+}
+.a-col{
+    width: 25%;
+    flex: 0 0 25%;
+    padding: 0 15px;
+}
+
+svg{
+    width: 70%;
+}
+.mt-80{
+    margin-top: 80px;
+}
+
+
+
+.gear{
+    /* fill:var(--gearFill) !important; */
+    cursor: pointer;
+}
+
+.leftSide{
+    flex: 0 0 50%;    
+    width: 50%;
+    position: relative;
+    padding: 15px
+}
+.leftSide::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: #666;
+}
+.preview{
+    flex: 0 0 50%;
+    width: 50%;
+}
+.editorContainer{
+    display: flex;
+    background: #444444;
+    height: 100vh;
+}
+.Mainheading h2{
+    font-size: 16px;
+}
+select.ariConverter{
+    display: none;
+}
+.selectWrap{
+    width: 100%;  
+    position: relative;
+    float: left;
+}
+.ar_searchWrap{
+ width: 100%;
+ position: absolute;
+ top: 100%;
+ left: 0px;
+ -moz-box-shadow: 0px 5px 7px -3px rgba(0, 0, 0, 0.4);
+ -webkit-box-shadow: 0px 5px 7px -3px rgba(0, 0, 0, 0.4);
+ box-shadow: 0px 5px 7px -3px rgba(0, 0, 0, 0.4);
+ max-height: 296px;
+ overflow-y: auto;
+}
+.instedSelectOption li{
+    cursor: pointer;
+    padding: 5px 10px;
+    background: #3498DB;
+    -webkit-transition: all ease-in-out 300ms;
+    -moz-transition: all ease-in-out 300ms;
+    transition: all ease-in-out 300ms;
+    color: #e0f3ff;
+}
+.instedSelectOption li:hover, .instedSelectOption li.active{
+    color: #fff;
+    background: #2980B9;
+}
+.instedSelectOption li +  li{
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.listIcon{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    color:  #06588f;
+}
+.listIcon i{
+    -moz-transition: all ease-in-out 300ms;
+    -webkit-transition: all ease-in-out 300ms;
+    -o-transition: all ease-in-out 300ms;
+    transition: all ease-in-out 300ms;
+}
+.listIcon.rotate i{
+    transform: rotate(-180deg);
+}   
+.selectedItem{
+    padding: 6px 10px;
+    background: #ffffff;
+    color: #06588f;
+    cursor: pointer;
+    border: 1px solid #e6e6e6;
+}
+.selectedItem i{
+    color: #ffffff;
+}
+.arSerchInput{
+    width: calc( 100% - 20px);
+    margin: 6px 10px;
+    height: 28px;
+    line-height: 26px;
+    border: 1px solid #dadada;
+    padding: 0;
+    font-size: 14px;
+    padding: 0 10px;
+}
+.arSerchInput:focus{
+    outline: none;
+    box-shadow: 0px 6px 5px -5px rgba(0, 0, 0, 0.2);
+}
